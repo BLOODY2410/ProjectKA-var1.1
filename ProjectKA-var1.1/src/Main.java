@@ -2,6 +2,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+class LineCount {
+    int count;
+    int index;
+
+    LineCount(int count, int index) {
+        this.count = count;
+        this.index = index;
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         if (args.length == 0) {
