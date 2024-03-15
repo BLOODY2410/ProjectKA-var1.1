@@ -23,9 +23,16 @@ public class Main {
             }
         }
 
-        // Тут можна виконати операції з прочитаними рядками
         for (String line : lines) {
-            System.out.println(line);
+            int count = 0;
+            for (int i = 0; i <= line.length() - substring.length(); i++) {
+                if (line.startsWith(substring, i)) {
+                    count++;
+                    i += substring.length() - 1; // Переміщуємо індекс, щоб уникнути перетину входжень
+                }
+            }
+            System.out.println("Рядок: " + line);
+            System.out.println("Кількість входжень підрядка \"" + substring + "\": " + count);
         }
     }
 }
