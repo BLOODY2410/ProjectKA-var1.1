@@ -44,8 +44,20 @@ public class Main {
             System.out.println("Рядок: " + line);
             System.out.println("Кількість входжень підрядка \"" + substring + "\": " + count);
         }
-    }
-}
+
+
+        boolean swapped;
+        do {
+            swapped = false;
+            for (int i = 0; i < counts.size() - 1; i++) {
+                if (counts.get(i).count > counts.get(i + 1).count) {
+                    LineCount temp = counts.get(i);
+                    counts.set(i, counts.get(i + 1));
+                    counts.set(i + 1, temp);
+                    swapped = true;
+                }
+            }
+        } while (swapped);
 
 
         for (LineCount lc : counts) {
