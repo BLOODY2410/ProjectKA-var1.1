@@ -48,4 +48,8 @@ public class Main {
 }
 
 
-
+        for (LineCount lc : counts) {
+            System.out.println(lc.count + " " + lc.index);
+        }
+    }
+}
